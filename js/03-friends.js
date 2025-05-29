@@ -40,3 +40,20 @@ const friends = [
     altDescription: 'Lela Jennings',
   },
 ];
+
+const refs = {
+  friendsList: document.querySelector('.js-friends-list'),
+};
+
+const createFriendCard = friendInfo => {
+  return `
+  <li class="friends-list-item">
+    <img class="friend-avatar" src="${friendInfo.avatarUrl}" alt="${friendInfo.altDescription}">
+    <h2 class="friend-name">${friendInfo.fullName}</h2>
+  </li>
+  `;
+};
+
+const friendsCardsTemplate = friends.map(friend => createFriendCard(friend)).join('');
+
+refs.friendsList.insertAdjacentHTML('beforeend', friendsCardsTemplate);

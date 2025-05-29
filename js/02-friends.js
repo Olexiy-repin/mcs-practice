@@ -40,3 +40,36 @@ const friends = [
     altDescription: 'Lela Jennings',
   },
 ];
+
+const refs = {
+  friendsList: document.querySelector('.js-friends-list'),
+};
+
+const createFriendCard = friendInfo => {
+  const friendItem = document.createElement('li');
+
+  friendItem.classList.add('friends-list-item');
+
+  const friendAvatar = document.createElement('img');
+
+  friendAvatar.classList.add('friend-avatar');
+  friendAvatar.src = friendInfo.avatarUrl;
+  friendAvatar.alt = friendInfo.altDescription;
+
+  friendItem.append(friendAvatar);
+
+  const friendName = document.createElement('h2');
+
+  friendName.classList.add('friend-name');
+  friendName.textContent = friendInfo.fullName;
+
+  friendItem.append(friendName);
+
+  return friendItem;
+};
+
+const friendsCardsArr = friends.map(friend => createFriendCard(friend));
+
+console.log(friendsCardsArr);
+
+refs.friendsList.append(...friendsCardsArr);
