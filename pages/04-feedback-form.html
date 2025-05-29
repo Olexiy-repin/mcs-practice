@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Feedback form</title>
+    <!-- Підключення стилів -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css"
+    />
+    <link rel="stylesheet" href="../css/04-feedback-form.css" />
+
+    <!-- Підключення скриптів -->
+    <script type="module" src="../js/04-feedback-form.js"></script>
+  </head>
+  <body>
+    <form class="feedback-form">
+      <label class="feedback-form-field-wrapper">
+        <input class="feedback-form-field" name="user_name" type="text" placeholder="" />
+        <span class="feedback-form-field-desc">Імʼя</span>
+      </label>
+      <label class="feedback-form-field-wrapper">
+        <input class="feedback-form-field" name="user_email" type="email" placeholder="" />
+        <span class="feedback-form-field-desc">Пошта</span>
+      </label>
+      <label class="feedback-form-field-wrapper">
+        <input class="feedback-form-field" name="user_phone" type="tel" placeholder="" />
+        <span class="feedback-form-field-desc">Номер телефону</span>
+      </label>
+      <label class="feedback-form-checkbox-wrapper">
+        <input class="feedback-form-checkbox visually-hidden" type="checkbox" />
+        <span class="feedback-form-custop-checkbox"></span>
+        Я,&nbsp;<span class="js-user-name"></span>&nbsp;погоджуюсь з&nbsp;<a href="">політикою конфіденційності</a>
+      </label>
+      <button class="feedback-form-sbmt-btn" type="submit">Надіслати</button>
+    </form>
+  </body>
+</html>

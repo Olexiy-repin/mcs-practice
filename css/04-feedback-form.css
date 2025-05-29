@@ -1,0 +1,113 @@
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  color: #303030;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  max-width: 500px;
+  padding: 40px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 10px 0 #cecece;
+  border-radius: 6px;
+}
+
+.feedback-form-field-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.feedback-form-field-desc {
+  position: absolute;
+  top: 50%;
+  left: 24px;
+  transform: translateY(-50%);
+  font-size: 12px;
+  letter-spacing: 0.03em;
+  color: #9c9b9b;
+  text-transform: uppercase;
+  transition: left 250ms linear;
+}
+
+.feedback-form-field {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #303030;
+  border-radius: 6px;
+  padding-left: 24px;
+  outline: transparent;
+  transition: border-color 250ms linear;
+}
+
+.feedback-form-field:focus {
+  border-color: #fd9222;
+}
+
+.feedback-form-field-wrapper:focus-within .feedback-form-field-desc,
+.feedback-form-field:not(:placeholder-shown) + .feedback-form-field-desc {
+  left: 100%;
+}
+
+.feedback-form-checkbox-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.feedback-form-custop-checkbox {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: 1px solid #303030;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.feedback-form-checkbox:checked + .feedback-form-custop-checkbox {
+  background-color: #fd9222;
+}
+
+.feedback-form-checkbox:focus + .feedback-form-custop-checkbox {
+  outline: 2px solid #0000ff80;
+}
+
+.feedback-form-sbmt-btn {
+  align-self: center;
+  min-width: 100px;
+  padding: 10px 6px;
+  background-color: #fd9222;
+  border: none;
+  border-radius: 6px;
+  color: #ffffff;
+  transition: background-color 250ms linear, color 250ms linear;
+}
+
+.feedback-form-sbmt-btn:hover,
+.feedback-form-sbmt-btn:focus {
+  background-color: #fcf1e0;
+  color: #fd9222;
+}
