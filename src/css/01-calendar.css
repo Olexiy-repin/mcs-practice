@@ -1,2 +1,43 @@
-@import url('../css/reset.css');
 @import url('flatpickr/dist/flatpickr.min.css');
+@import url('basiclightbox/dist/basicLightbox.min.css');
+@import url('izitoast/dist/css/iziToast.min.css');
+@import url('../css/reset.css');
+
+.notification-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
+  width: 300px;
+  padding: 40px;
+  border-radius: 6px;
+  background-color: #ffffff;
+}
+
+.notification-form-field-wrapper span {
+  display: block;
+  margin-bottom: 4px;
+  font-size: 14px;
+  color: #858585;
+}
+
+.notification-form-field {
+  width: 100%;
+  height: 40px;
+  padding-left: 12px;
+  border: 1px solid #303030;
+  border-radius: 6px;
+}
+
+.notification-form-sbmt-btn {
+  padding: 10px 20px;
+  align-self: center;
+  color: #ffffff;
+  background-color: #0b57d0;
+  border: transparent;
+  border-radius: 6px;
+  transition: background-color 250ms linear;
+}
+
+.notification-form-sbmt-btn:hover {
+  background-color: #3c73ca;
+}
