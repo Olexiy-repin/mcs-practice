@@ -1,0 +1,7 @@
+@import url('./reset.css');
+
+.page-section {
+  height: 200px;
+  color: #ffffff;
+  padding: 20px;
+}
